@@ -59,6 +59,8 @@ A partial todo list:
 - Update linechart on click on map marker
 - Make mobile friendly
 - Create a client to communicate with sensors/ hardware
+- Add option to select different data types
+- Show current data values of the selected data type in the worldmap
 - Add 102 Vote for operator transaction
 - Add 103 Unvote operator transaction
 - Implement Proof of Trusted Operators (POTO) system
