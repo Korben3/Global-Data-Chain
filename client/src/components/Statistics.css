@@ -1,0 +1,42 @@
+.StatisticsWrapper {
+  color: black;
+}
+.StatisticsTable1 {
+  float: left;
+  width: 50%;
+  border: 2px solid black;
+  box-sizing: border-box;
+  height: 200px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background: white;
+  border-radius: 20px;
+  padding: 5px;
+  /* overflow: scroll; */
+}
+.StatisticsTable2 {
+  float: left;
+  width: 50%;
+  border: 2px solid black;
+  box-sizing: border-box;
+  height: 200px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background: white;
+  border-radius: 20px;
+  padding: 5px;
+}
+ul a:link {
+  color: #000000;
+  text-decoration: none;
+}
+ul a:visited {
+  color: #000000;
+  text-decoration: none;
+}
+ul a:hover {
+  color: #444444;
+}
+ul a:active {
+  color: #444444;
+}

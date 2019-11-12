@@ -1,0 +1,22 @@
+body {
+  background: url("./assets/headerBngd-greenGradient.png");
+  background-repeat: repeat-y;
+  font-size: 100%;
+  font-family: "Open-Sans", sans-serif;
+  color: white;
+  margin: 0;
+}
+a:link {
+  color: #cccccc;
+  text-decoration: none;
+}
+a:visited {
+  color: #cccccc;
+  text-decoration: none;
+}
+a:hover {
+  color: cyan;
+}
+a:active {
+  color: grey;
+}
