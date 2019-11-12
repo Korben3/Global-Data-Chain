@@ -26,7 +26,7 @@ For client documentation: [Client - Readme](https://github.com/Korben3/Global-Da
 
 For Server documentation: [Server - Readme](https://github.com/Korben3/Global-Data-Chain/blob/master/server/README.md)
 
-You can find helpfull tools and examples to make transactions in the [server/tools](https://github.com/Korben3/Global-Data-Chain/tree/master/server/tools) directory.
+You can find helpful tools and examples to make transactions in the [server/tools](https://github.com/Korben3/Global-Data-Chain/tree/master/server/tools) directory.
 
 ### Custom transactions
 
