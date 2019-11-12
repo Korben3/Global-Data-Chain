@@ -1,6 +1,6 @@
 # Global Data Chain
 
-Global Data Chain is a decentralized Sidechain PoC build with the [Lisk SDK](http://lisk.io). It can be used for storing various scientific measurements worldwide. for example:
+Global Data Chain is a decentralized Sidechain PoC build with the [Lisk SDK](http://lisk.io). It can be used for storing various scientific measurements worldwide. For example:
 
 - Global temperatures
 - Radioactivity
@@ -26,27 +26,27 @@ For client documentation: [Client - Readme](https://github.com/Korben3/Global-Da
 
 For Server documentation: [Server - Readme](https://github.com/Korben3/Global-Data-Chain/blob/master/server/README.md)
 
+You can find helpfull tools and examples to make transactions in the [server/tools](https://github.com/Korben3/Global-Data-Chain/tree/master/server/tools) directory.
+
 ### Custom transactions
 
 There are currently 2 custom transactions implemented:
 
-#### 101 register as operator 100 GDC
-
+**Type 101 register as operator 100 GDC**
+```
 Operator object:
-
  name: string (64 char)
+ location: string (22 char - Decimal degrees notation)
+```
+For the locations use [Google maps](http://maps.google.com) Decimal degrees notation, example: `64.750913, -18.696712`
 
- location: string (22 char - [Google maps](http://maps.google.com) Decimal degrees notation)
-
-#### 104 send data	0 GDC
-
+**Type 104 send data	0 GDC**
+```
 dataType: string (20 char)
-
 dataValue: string (10 char)
-
-1 checks if sender is an operator
-
-2 increases the `totalDataTransactions` counter stored in the senders account
+```
+1. checks if sender is an operator
+2. increases the `totalDataTransactions` counter stored in the senders account
 
 
 ### Todo
@@ -56,9 +56,10 @@ A partial todo list:
 - Fix timestamp
 - Update linechart on click on map marker
 - Make mobile friendly
-- Add type 
+- Create a client to communicate with sensors/ hardware
 - Add 102 Vote for operator transaction
 - Add 103 Unvote operator transaction
+- Implement Proof of Trusted Operators (POTO) system
 - ..
 
 
