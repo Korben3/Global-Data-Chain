@@ -5,7 +5,7 @@ const { APIClient } = require("@liskhq/lisk-api-client");
 
 // config
 const client = new APIClient(["http://45.32.152.68:4000"]); // SDK test server 2
-const passphrase = "peasant farm early vehicle bundle air merry elephant opinion volume gown hammer"; // HQ
+const passphrase = "twice enrich bread citizen broccoli inject wink roast surge fuel loyal kangaroo"; // Ken
 
 const getTimestamp = () => {
   const millisSinceEpoc = Date.now() - Date.parse(EPOCH_TIME);
