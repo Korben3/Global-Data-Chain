@@ -22,9 +22,9 @@ Example calls:
 - [Latest 10 registered operators](http://45.32.152.68:4000/api/transactions?sort=timestamp%3Adesc&limit=10&type=101)
 - [Account info](http://45.32.152.68:4000/api/accounts?address=5320901975065898377L)
 
-For client documentation: [Client - Readme](https://github.com/Korben3/Global-Data-Chain/blob/master/client/README.md)
+For client documentation: [Client - Readme](https://github.com/Korben3/Global-Data-Chain/tree/master/client)
 
-For Server documentation: [Server - Readme](https://github.com/Korben3/Global-Data-Chain/blob/master/server/README.md)
+For Server documentation: [Server - Readme](https://github.com/Korben3/Global-Data-Chain/tree/master/server)
 
 You can find helpful tools and examples to make transactions in the [server/tools](https://github.com/Korben3/Global-Data-Chain/tree/master/server/tools) directory.
 
@@ -54,6 +54,8 @@ dataValue: string (10 char)
 A partial todo list:
 
 - Fix timestamp
+- Avoid duplicate operators
+- Display live data in linechart (update every n seconds)
 - Update linechart on click on map marker
 - Make mobile friendly
 - Create a client to communicate with sensors/ hardware
