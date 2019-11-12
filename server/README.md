@@ -1,4 +1,4 @@
-# Global Data Chain 
+# Global Data Chain - server
 
 ### Prerequisites
 
