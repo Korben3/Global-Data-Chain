@@ -40,11 +40,11 @@ const Statistics = props => {
 
   return (
     <div className="StatisticsWrapper">
-      <div id="GDCoperators" className="StatisticsTable1">
+      <div id="GDCoperators" className="statisticsMobile StatisticsTable1">
         <code>Click on an operator to view the noise measurements:</code>
         <ul>{GDCoperators}</ul>
       </div>
-      <div id="operatorData" className="StatisticsTable2">
+      <div id="operatorData" className="statisticsMobile StatisticsTable2">
         <LineChart operator={operator} account={account} />
       </div>
     </div>
