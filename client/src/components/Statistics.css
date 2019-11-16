@@ -1,3 +1,9 @@
+@media screen and (max-width: 450px) {
+  body .statisticsMobile {
+    width: 100%;
+    float: none;
+  }
+}
 .StatisticsWrapper {
   color: black;
 }
@@ -26,6 +32,7 @@
   border-radius: 20px;
   padding: 5px;
 }
+
 ul a:link {
   color: #000000;
   text-decoration: none;
