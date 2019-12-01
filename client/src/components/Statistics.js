@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Statistics.css";
 import LineChart from "./LineChart";
-import { getTransactions } from "../utils/api";
+import { getAccounts } from "../utils/api";
 
 const Statistics = props => {
   const [operator, setOperator] = useState("korben3");
@@ -14,22 +14,25 @@ const Statistics = props => {
   };
 
   useEffect(() => {
-    getTransactions({
-      type: 101,
-      sort: "timestamp:desc",
-      limit: 6
+    getAccounts({
+      limit: 7
     })
       .then(res => {
-        console.log(res.data);
+        console.log("Statistics, accounts:");
 
-        const GDCoperators = res.data.map(data => (
-          <li key={data.asset.operator.name}>
+        const data = res.data.filter(item => item.asset.operator);
+        const GDCoperators = data.map(item => (
+          <li key={item.asset.operator.name}>
             Operator:
-            <a href="#" onClick={() => viewOperatorData([data.asset.operator.name, data.senderId])}>
-              {data.asset.operator.name}
-            </a>
+            <span
+              onClick={() => viewOperatorData([item.asset.operator.name, item.address])}
+              className="operatorButton"
+            >
+              {item.asset.operator.name}
+            </span>
           </li>
         ));
+        console.log(GDCoperators);
 
         setGDCoperators(GDCoperators);
       })
