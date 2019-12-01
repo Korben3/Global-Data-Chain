@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./WorldMap.css";
 import Markers from "./Markers";
-import { getTransactions } from "../utils/api";
+import { getAccounts } from "../utils/api";
 import { Map, TileLayer } from "react-leaflet";
 
 const WorldMap = () => {
@@ -11,23 +11,23 @@ const WorldMap = () => {
 
   useEffect(() => {
     // retrieve operators and place them on the WorldMap
-    getTransactions({
-      type: 101,
-      sort: "timestamp:desc",
-      limit: 6
+    getAccounts({
+      limit: 7
     })
       .then(res => {
+        console.log("WorldMap accounts:");
         console.log(res.data);
 
         let tempArray = [];
         let operatorsInfo = [];
-        res.data.forEach(item => {
+        const data = res.data.filter(item => item.asset.operator);
+        data.forEach(item => {
           if (typeof item.asset.operator.name !== "undefined") {
             tempArray = {};
             tempArray["userName"] = item.asset.operator.name;
             tempArray["lat"] = parseFloat(item.asset.operator.location.split(", ")[0]);
             tempArray["lng"] = parseFloat(item.asset.operator.location.split(", ")[1]);
-            tempArray["account"] = item.senderId;
+            tempArray["account"] = item.address;
             operatorsInfo.push(tempArray);
           }
         });
