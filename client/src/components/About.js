@@ -14,7 +14,7 @@ const About = () => {
         <li>Global temperatures</li>
         <li>Radioactivity</li>
         <li>Rainfall</li>
-        <li>Animal sightings, birds, certain endangered species, ..</li>
+        <li>Carbon Dioxide levels</li>
         <li>Noise</li>
         <li>Traffic</li>
       </ul>
@@ -28,8 +28,8 @@ const About = () => {
       </p>
       <p>
         You can find the source for the server and client on
-        <a href="https://github.com/Korben3/liskwall"> Github - korben3 - Global-Data-Chain</a> the public API
-        is available at <a href="http://45.32.152.68:4000">45.32.152.68:4000</a>, example call:{" "}
+        <a href="https://github.com/Korben3/Global-Data-Chain"> Github - korben3 - Global-Data-Chain</a>. The
+        public API is available at <a href="http://45.32.152.68:4000">45.32.152.68:4000</a>, example call:
         <a href="http://45.32.152.68:4000/api/transactions?sort=timestamp%3Adesc&limit=10">
           View the 10 latest transactions.
         </a>
@@ -37,29 +37,21 @@ const About = () => {
       <p>
         GDC is in its early stages as a Proof of Concept and there are a lot of small and big improvements to
         be made. One of the big changes is the introduction of the
-        <b> Proof of Trusted Operators</b> system. To gain a large pool of operators submitting data at
-        regular intervals, operators are paid by the system to send data. To prevent misuse a GDC account
-        holder can only send data if:
+        <b> Proof of Trusted Operators</b> system. To prevent misuse a GDC account holder can only send data
+        if:
       </p>
       <blockquote>
         The account is registered as an operator.
         <br />
-        And voted on by 3 active operators.
-      </blockquote>
-      <p>An operator is only paid if:</p>
-      <blockquote>
-        The above requirements are true.
-        <br />
-        And a minimum of 1000 tx's of data has been sent by the new operator.
+        And voted on by 2 active operators.
       </blockquote>
       <p>An active operator is someone with an account with at least 10000 tx's of data sent.</p>
       <p>
-        To be able to earn GDC tokens as an operator one must first convince active operators that (s)he is
-        trustwhorthy and dedicated to sending quality data. This can be done on various community channels.
-        After the new operator gains 3 votes and has everything setup, the active operators that voted are
-        encouraged to keep an eye on the new user. If there are any signs of misuse, the new operator can be
-        un-voted thus being prevented from earning GDC. After the 1000th data transaction the new operator
-        will earn GDC tokens.
+        Delegates are encouraged to share GDC tokens with anyone serious about sharing data with GDC. New
+        operators willing to contribute to GDC will be able to introduce themselves on various community
+        channels. After the new operator gains 2 votes and has everything setup, the active operators that
+        voted will keep an eye on the new user. If there are any signs of misuse, the new operator can be
+        un-voted thus being prevented from sending incorrect data.
       </p>
     </div>
   );
