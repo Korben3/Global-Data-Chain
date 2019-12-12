@@ -1,13 +1,12 @@
 {
   "name": "gdc-client",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.2.0",
   "dependencies": {
     "leaflet": "^1.5.1",
     "lisk-elements": "^2.4.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-leaflet": "^2.5.0",
+    "react-leaflet": "^2.6.0",
     "react-scripts": "3.2.0",
     "react-vis": "^1.11.7"
   },
