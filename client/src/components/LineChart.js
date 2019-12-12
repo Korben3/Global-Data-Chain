@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "../../node_modules/react-vis/dist/style.css";
 import { XYPlot, LineSeries, makeWidthFlexible, HorizontalGridLines, XAxis, YAxis } from "react-vis";
 import { getTransactions } from "../utils/api";
-const { EPOCH_TIME } = require("@liskhq/lisk-constants");
 
 const LineChart = props => {
   const [operatorsData, setOperatorsData] = useState([]);
@@ -19,9 +18,10 @@ const LineChart = props => {
       .then(res => {
         console.log(res.data);
 
+        let data = res.data.reverse();
         let tempArray = [];
         let operatorsData = [];
-        res.data.forEach((item, index) => {
+        data.forEach((item, index) => {
           if (typeof item.asset.dataValue !== "undefined") {
             tempArray = {};
             tempArray["x"] = index + 1;
@@ -34,7 +34,7 @@ const LineChart = props => {
       .catch(err => {
         console.log(err);
       });
-  }, [props.operator]);
+  }, [props.account]);
 
   const FlexibleXYPlot = makeWidthFlexible(XYPlot);
 
