@@ -1,24 +1,22 @@
 import React from "react";
-import { Marker, Popup } from "react-leaflet";
+import { Marker, Tooltip } from "react-leaflet";
 
-const Markers = props => {
+const Markers = ({ operatorsInfo, markerClicked }) => {
   console.log("Markers:");
-  console.log(props);
-  const { operatorsInfo } = props;
-
-  const clicked = data => {
-    // update LineChart on click
-    console.log("Marker clicked: " + data[0]);
-    console.log(data[1]);
-  };
+  console.log(operatorsInfo);
+  //const { operatorsInfo } = operatorsInfo;
 
   const markerComponents = operatorsInfo.map(data => (
     <Marker
       key={data.userName}
       position={[data.lat, data.lng]}
-      onClick={() => clicked([data.userName, data.account])}
+      onClick={() => markerClicked([data.userName, data.account])}
     >
-      <Popup>Operator: {data.userName}</Popup>
+      <Tooltip>
+        Operator: {data.userName}
+        <br />
+        Total data transactions: {data.totalDataTransactions}
+      </Tooltip>
     </Marker>
   ));
 
