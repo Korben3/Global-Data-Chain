@@ -4,7 +4,7 @@ import Markers from "./Markers";
 import { getAccounts } from "../utils/api";
 import { Map, TileLayer } from "react-leaflet";
 
-const WorldMap = () => {
+const WorldMap = ({ markerClicked }) => {
   const [operatorsInfo, setOperatorsInfo] = useState([]);
 
   console.log("WorldMap: ");
@@ -28,6 +28,7 @@ const WorldMap = () => {
             tempArray["lat"] = parseFloat(item.asset.operator.location.split(", ")[0]);
             tempArray["lng"] = parseFloat(item.asset.operator.location.split(", ")[1]);
             tempArray["account"] = item.address;
+            tempArray["totalDataTransactions"] = item.asset.operator.totalDataTransactions;
             operatorsInfo.push(tempArray);
           }
         });
@@ -54,7 +55,7 @@ const WorldMap = () => {
         attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
       />
-      <Markers operatorsInfo={operatorsInfo} />
+      <Markers operatorsInfo={operatorsInfo} markerClicked={markerClicked} />
     </Map>
   );
 };
