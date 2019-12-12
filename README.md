@@ -7,6 +7,7 @@ Global Data Chain is a decentralized Sidechain PoC build with the [Lisk SDK](htt
 - Rainfall
 - Noise
 - Traffic
+- Carbon Dioxide levels
 
 These measurements are collected by trusted operators worldwide. With this wide range of collected data it is possible to gain insight in past conditions, analyse and predict future conditions and even see if there are any correlations between the different data stored on GDC.
 
@@ -56,8 +57,8 @@ A partial todo list:
 - Fix timestamp
 - Avoid duplicate operators
 - Display live data in linechart (update every n seconds)
-- Update linechart on click on map marker
-- Make mobile friendly
+✓ Update linechart on click on map marker
+✓ Make mobile friendly
 - Create a client to communicate with sensors/ hardware
 - Add option to select different data types
 - Show current data values of the selected data type in the worldmap
