@@ -57,8 +57,8 @@ A partial todo list:
 - Fix timestamp
 - Avoid duplicate operators
 - Display live data in linechart (update every n seconds)
-✓ Update linechart on click on map marker
-✓ Make mobile friendly
+- ✓ Update linechart on click on map marker
+- ✓ Make mobile friendly
 - Create a client to communicate with sensors/ hardware
 - Add option to select different data types
 - Show current data values of the selected data type in the worldmap
@@ -66,5 +66,4 @@ A partial todo list:
 - Add 103 Unvote operator transaction
 - Implement Proof of Trusted Operators (POTO) system
 - ..
-
 
