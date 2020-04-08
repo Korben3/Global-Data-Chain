@@ -38,4 +38,4 @@ The tools directory contains example script to easily make a transaction.
 
 You can connect with the chain using Lisk Desktop by adding the node: http://45.32.152.68:4000
 
-Use `ugly lawsuit scissors image draft equal fever general chase clown crunch pizza` to transfer DOC tokens to your account to make transactions.
+Use `ugly lawsuit scissors image draft equal fever general chase clown crunch pizza` to transfer 100 GDC tokens to your account in order to register as another operator.
